@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner scanner = new Scanner(System.in);
+    
+    //Variaveis
+    float peso, total, conversao;
+    int agua;
+    
+    
+    //Peso do usuario para calcular a quantidade de agua
+    System.out.println("Digite o seu peso");
+    	peso = scanner.nextFloat();
+    
+    //quantidade de agua que deve ser ingerida por kg
+   	agua = 35;
+    
+    //formula para calcular a quantidade de agua que deve ser ingerida por kg
+    total = agua * peso;
+    
+    //Formula para converter ML em L
+    conversao = total /1000;
+    
+    System.out.println(String.format("A quantidade de agua ingerida deve ser de %.2fL",conversao));
+    
+    scanner.close();
+    
+    
+    
+    
+    
+ }
+}
