@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner scanner = new Scanner(System.in);
+    
+    //Variaveis
+    int A, B;
+    
+    System.out.println("Digite o valor da variavel A que se tornará B");
+    	A = scanner.nextInt();
+    System.out.println("Digite o valor da variavel B que se tornará A");
+    	B = scanner.nextInt();
+    
+    
+    
+    System.out.println("O valor de A agora é "+B);
+        
+    System.out.println("O valor de B agora é "+A);
+    
+    scanner.close();
+
+    
+    
+  }
+}
