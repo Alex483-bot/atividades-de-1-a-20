@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    
+    double dolar, real;
+    double valor;
+    valor = 4.95;
+    
+    System.out.println(String.format("O Dolar hoje equivale a R$%.2f", valor));
+    System.out.println("Digite o valor que você deseja converter:");
+    	dolar = scanner.nextDouble();
+    
+    real = dolar*valor;
+    System.out.println(String.format("O valor convertido é R$%.2f", real));
+    scanner.close();
+    
+ }
+}
