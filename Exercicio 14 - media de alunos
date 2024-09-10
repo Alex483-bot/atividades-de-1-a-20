@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    
+    //Variaveis
+    while(true){
+    float nota1, nota2, nota3 = 0, media;
+ 
+      while(true) {
+    
+    System.out.println("Digite a nota na primeira avaliação");
+    	nota1 = scanner.nextFloat();
+   if  (nota1 <=10 && nota1 >=0) {
+      	break;
+     
+   }
+	 else{
+       System.out.println("A nota deve ser maior que 0 e menor que 10. Tente novamente");
+     
+    }
+    }
+   while(true) {
+    System.out.println("Digite a nota na segunda avaliação");
+    	nota2 = scanner.nextFloat();
+     if (nota2<=10 && nota2>=0){
+       break;
+     }
+     
+     else{
+        System.out.println("A nota deve ser maior que 0 e menor que 10. Tente novamente");
+       
+     }
+   }
+    
+    while (true) {
+    System.out.println("Digite a nota na terceira avaliação");
+		nota3 = scanner.nextFloat();
+    if (nota3>=0 && nota3<=10) {
+    	break;
+    }
+      else{
+        System.out.println("A nota deve ser maior que 0 e menor que 10. Tente novamente");
+        
+      }
+   
+    }
+  
+    media = (nota1 + nota2 + nota3) /3;
+    
+    System.out.println("A média do aluno foi " +media);
+    
+    if (media >=7) {
+      System.out.println("APROVADO");
+    }
+      else{
+        System.out.println("Reprovado");
+      }
+      
+    }    
+  }
+}
