@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    
+    //Variaveis
+    Float Gasolina, Etanol, Porcentagem;
+    
+    System.out.println("Digite o valor da gasolina");
+    Gasolina = scanner.nextFloat();
+    
+    System.out.println("Digite o valor do Etanol");
+    	Etanol = scanner.nextFloat();
+    
+    Porcentagem = Etanol*Gasolina /100;
+    
+    if (Porcentagem <= 0.7f) {
+      
+      System.out.println("Abasteça Etanol");
+    }
+      
+      else {
+        
+        System.out.println("Abasteça Gasolina");
+      }
+    scanner.close();
+      
+      
+    }
+    
+    
+ 
+    
+  }
