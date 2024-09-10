@@ -1,0 +1,51 @@
+
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    
+    //Variaveis
+    float com, larg, area, arredon, valor, total;
+    String continuar;
+    
+    System.out.println("Digite o valor do comprimento da area");
+    	com = scanner.nextFloat();
+    
+    System.out.println("Digite o valor da largura da area");
+    	larg = scanner.nextFloat();
+    
+    System.out.println("Digite o valor do M² (apenas numeros)");
+    	valor = scanner.nextFloat();
+    
+    
+    area = com * larg;
+    
+    
+    arredon = (float) Math.ceil(area) *1.1f;
+    System.out.println(String.format("A area necessária de piso será de %.0fM²", arredon));
+    
+    System.out.println("Deseja saber o valor total a ser pago?");
+    	continuar = scanner.next();
+    
+    if (continuar.equalsIgnoreCase("Sim") || continuar.equalsIgnoreCase("S") || continuar .equalsIgnoreCase("sim"))
+    {
+      total = valor*arredon;
+      	System.out.println(String.format("O valor total a ser pago é %.2f", total));
+      	System.out.println("Programa finalizado");
+  
+    }
+    else {
+      
+      System.out.println("Programa finalizado");
+    }
+    
+    
+    
+    
+    scanner.close();
+    
+    //ncremente o programa da questão 6, para informar o valor do metro quadrado da cerâmica
+	//escolhido e o valor total a ser pago.
+
+  }
+}
