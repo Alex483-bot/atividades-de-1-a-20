@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+   Scanner scanner = new Scanner (System.in);
+    while (true){
+    //variaveis
+    int quantidade;
+    String nome;
+    float desconto, total, preço, totalpago;
+    
+    
+    //descrição do produto
+   System.out.println("Qual o nome do produto?");
+    nome = scanner.nextLine();
+    
+    //quantidade adquirida
+    
+   System.out.println("Digite a quantidade adquirida do produto");
+    quantidade = scanner.nextInt();
+      scanner.nextLine();
+    
+    System.out.println("Digite o preço unitario do produto");
+    	preço = scanner.nextFloat();
+      	scanner.nextLine();
+    
+    total = quantidade * preço;
+    
+    System.out.printf("O valor total sem desconto de %s ficou em R$%.2f\n", nome, total);
+    
+    if (quantidade <=5) {
+      	totalpago = total*0.98f;
+    }
+    else if (quantidade >5 && quantidade<=10) {
+      totalpago = total*0.97f;
+    }
+    else if (quantidade>10 && quantidade <30){
+      	totalpago = total*0.95f;
+    }
+      else {
+      	totalpago = total*0.90f;
+
+    }
+            System.out.printf("O total a ser pago por %s é R$%.2f\n", nome, totalpago);
+      
+      while (true){		
+      System.out.println("Digite Reiniciar para reiniciar o programa e Fechar para encerrar");
+      
+	String fechar = scanner.nextLine().trim();    
+      
+     
+     
+      if  (fechar.equalsIgnoreCase("Fechar") || fechar.equalsIgnoreCase("f"))
+      	
+      {
+        scanner.close();
+        return;
+        
+      }
+        
+      else if (fechar.equalsIgnoreCase("Reiniciar")|| fechar.equalsIgnoreCase("r"))
+      {
+        break;
+      	}
+      else 
+      {
+        System.out.println("Palavra invalida. Tente novamente");
+        
+        
+      }
+      }
+  
+    }
+	}
+  
+}
