@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    
+    //variaveis
+    int branco, nulo, valido;
+    float pbranco, pnulo, pvalido, total;
+    
+    
+    while (true){
+    System.out.println("Digite a quantidade de votos validos");
+    	valido = scanner.nextInt();
+      if (valido >=0) {
+        break;
+      }
+      else {
+        System.out.println("O número de votos não pode ser negativo. Tente novamente");
+      }
+    }
+    
+    while (true) {
+    System.out.println("Digite a quantidade de votos nulos");
+    	nulo = scanner.nextInt();
+          if (nulo >=0) {
+        break;
+      }
+      else {
+        System.out.println("O número de votos não pode ser negativo. Tente novamente");
+      }
+    }
+    
+    while (true) {
+    System.out.println("Digite a quantidade de votos brancos");
+    	branco = scanner.nextInt();
+         if (branco >=0) {
+        break;
+      }
+      else {
+        System.out.println("O número de votos não pode ser negativo. Tente novamente");
+      }
+    }
+    total = branco + nulo + valido;
+    if (total ==0) {
+     System.out.println("Não há eleitores para calcular a porcentagem");
+    }
+    	else {
+          
+    pbranco = ((branco /total)*100);
+    pnulo =  ((nulo /total)*100);;
+    pvalido = ((valido /total)*100);
+          System.out.printf("A porcentagem de votos brancos foi de %.2f%%\n", pbranco);
+          System.out.printf("A porcentagem de votos nulos foi de %.2f%%\n", pnulo);
+          System.out.printf("A porcentagem de votos  validos de %.2f%%\n", pvalido);
+          scanner.close();
+         
+    
+    }
+    
+  }
+}
