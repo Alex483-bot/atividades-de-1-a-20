@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    
+    //Escreva um programa que calcula o salário líquido de um funcionário. O programa deve solicitar
+	//o valor da hora de trabalho, o número de horas trabalhadas no mês e o percentual de desconto
+	//do INSS
+    
+    Scanner scanner = new Scanner(System.in);
+    
+    //Variaveis
+    float liquido, valorhora, nhora;
+    
+    
+    
+    System.out.println("Digite o número de horas trabalhadas");
+    	nhora = scanner.nextFloat();
+    
+    System.out.println("Digite o valor da hora do funcionario");
+    	valorhora = scanner.nextFloat();
+    
+   
+    liquido = valorhora * nhora * 0.92f;
+    
+    System.out.println(String.format("O salario liquido é R$%.2f", liquido));
+    
+    scanner.close();
+   
+  }
+}
