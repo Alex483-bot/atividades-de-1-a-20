@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner (System.in);
+    
+    //Faça um programa para o seguinte problema: Compraram-se N canetas iguais, que foram pagas
+	//com uma nota de Z reais, obtendo-se Y reais como troco. Quanto custou cada caneta?
+    
+    //Variaveis
+    float canetas, nota, troco, valor;
+    
+    System.out.println("Digite quantas canetas fora compradas");
+    	canetas = scanner.nextFloat();
+    
+    System.out.println("Digite a nota usada como pagamento");
+    	nota = scanner.nextFloat();
+    System.out.println("Digite o valor do troco");
+    	troco = scanner.nextFloat();
+    	
+   
+  valor = (nota - troco) / canetas;
+    
+    System.out.println(String.format("O valor de cada caneta foi de R$%.2f", valor));
+    
+    scanner.close();
+  }
+ 
+}
