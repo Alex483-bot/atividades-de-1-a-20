@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    
+    //Variaveis para calculo
+    double A, pi, R, expoente, R2;
+    
+    //valores que o usuatio não podera mudar
+    pi = Math.PI;
+    expoente = 2;
+  	
+    System.out.println("Digite o valor do raio do circulo");
+    R = scanner.nextDouble();
+    		
+    		//formula matemática para calcular area do circulo
+    		R2 = Math.pow(R, expoente);
+    		A = pi*R2;
+    
+    //Resultado final
+    System.out.println(String.format("O valor da area do circulo é %.2f", A));
+    
+    scanner.close();
+
+  }
+}
