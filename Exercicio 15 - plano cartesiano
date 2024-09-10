@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+
+class Main {
+  public static void main(String[] args) {
+    //ABRINDO O SCANNER 
+    Scanner scanner = new Scanner(System.in);
+    
+    int ponto1 , ponto2 , ponto3 , ponto4;
+    float distancia, distanciafinal;
+    
+  System.out.println("Digite o valor do primeiro ponto");
+    ponto1 = scanner.nextInt();
+    
+    System.out.println("Digite o valor do segundo ponto");
+    	ponto2 = scanner.nextInt();
+    
+    System.out.println("Digite o valor do terceiro ponto");
+    	ponto3 = scanner.nextInt();
+    
+    System.out.println("Digite o valor do quarto ponto");
+    	ponto4 = scanner.nextInt();
+    
+    distancia = ((int) Math.pow((ponto1-ponto2), 2) + (int) Math.pow ((ponto3 - ponto4), 2));
+    distanciafinal= (float)Math.sqrt(distancia);
+    
+    System.out.println(String.format ("A distancia entre os dois pontos é %.2f", distanciafinal));
+    
+    
+    scanner.close();
+ 
+  }
+}
