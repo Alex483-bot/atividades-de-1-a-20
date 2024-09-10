@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    
+   	//variaveis notas dos alunnos
+    float nota1;
+    float nota2;
+    float nota3;
+    float media;
+    
+    //primeira nota
+    System.out.println("Digite o valor da primeira nota");
+    	nota1 = scanner.nextFloat();
+    
+    //segunda nota
+        System.out.println("Digite o valor da segunda nota");
+        	nota2 = scanner.nextFloat();
+    
+    //terceira nota
+    System.out.println("Digite o valor da terceira nota");
+        nota3 = scanner.nextFloat();
+    
+    media = (nota1 + nota2 + nota3) /3;
+    
+    System.out.println("A media das notas do aluno é " +media);
+    
+    scanner.close();
+
+  
+  }
+}
