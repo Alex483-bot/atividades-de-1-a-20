@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    
+    while(true){
+    
+    //variaveis
+    int idade;
+    
+    System.out.println("Digite a idade para descobrir o tipo de eleitor ");
+    	idade = scanner.nextInt();
+    
+    if (idade <16) {
+      System.out.println("Essa pessoa não é eleitor(a)");
+      
+    }
+    else if(idade<18 || idade>65){
+      System.out.println("Essa pessoa é um(a) eleitor(a) facultativo(a)");
+      
+    }
+    
+    else {
+            System.out.println("Essa pessoa é um(a) eleitor(a) obrigatorio(a)");
+      }  
+    }
+  }
+}
