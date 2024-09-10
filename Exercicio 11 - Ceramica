@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    
+    //Variaveis
+    float com, larg, area, arredon;
+    
+    System.out.println("Digite o valor do comprimento da area");
+    com = scanner.nextFloat();
+    
+    System.out.println("Digite o valor da largura da area");
+    larg = scanner.nextFloat();
+    
+    area = com * larg;
+    
+    arredon = (float) Math.ceil(area) *1.1f;
+    
+    System.out.println(String.format("A area necessária de piso será de %.0fM²", arredon));
+    
+    scanner.close();
+
+  }
+}
